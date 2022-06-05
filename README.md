@@ -11,6 +11,7 @@ pip install wandb -->
 ```
 conda env create -f environment.yml
 conda activate DLMI_Task2
+pip install labelme
 ```
 
 ## Preprocess
