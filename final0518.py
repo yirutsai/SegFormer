@@ -25,7 +25,7 @@ parser.add_argument("--n_epochs",type=int,default=100)
 parser.add_argument("--do_predict",action="store_true")
 parser.add_argument("--patience",type=int,default=20)
 parser.add_argument("--img",type=int,default=512)
-parser.add_argument("--feature_ext_type,type=str,default="nvidia/mit-b5")
+parser.add_argument("--feature_ext_type",type=str,default="nvidia/mit-b5")
 parser.add_argument("--seed",type=int,default=3030)
 
 args = parser.parse_args()
