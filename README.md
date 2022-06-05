@@ -41,7 +41,7 @@ Sample:
 python final0518.py --lr 3e-5 --model_type nvidia/mit-b4 --bs 1 --img 800 --patience 150 --n_epochs 200
 ```
 ## Inference Only
-If you just want to inference with well-trained model, please follow the format in `final0518.py`.
+If you just want to inference with well-trained model, please follow the format in `final0518.py`. (Remove `best_` and `.pt`)
 For example, if you want to inference `best_nvidia_mit-b4_9101.pt`, please set `model_type` as `nvidia/mit-b4_9101`.
 
 ## Ensemble
