@@ -117,7 +117,10 @@ class SemanticSegmentationDataset(Dataset):
         return encoded_inputs
 
 root_dir = 'Images_Train90Valid10'
-feature_extractor = SegformerFeatureExtractor.from_pretrained(args.model_type,size=args.img)
+if("mit-b4" in args.model_type):
+    feature_extractor = SegformerFeatureExtractor.from_pretrained("nvidia/mit-b4",size=args.img)
+else:
+    feature_extractor = SegformerFeatureExtractor.from_pretrained("nvidia/mit-b5",size=args.img)
 
 train_dataset = SemanticSegmentationDataset(root_dir=root_dir, feature_extractor=feature_extractor,aug=True)
 valid_dataset = SemanticSegmentationDataset(root_dir=root_dir, feature_extractor=feature_extractor, train=False)
