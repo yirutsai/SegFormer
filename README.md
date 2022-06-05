@@ -25,6 +25,7 @@ python divide.py
 python final0518.py \
         --lr <learning_rate> \
         --model_type <pretrained_weight> \
+        --feature_ext_type <feature_extractor_type> \
         --bs <batch_size> \
         --n_epochs <n_epochs> \
         --workers <num_workers for dataloader>\
@@ -38,7 +39,7 @@ If `do_predict` is launched, it will only inference and no training. If not, it 
 
 Sample:
 ```
-python final0518.py --lr 3e-5 --model_type nvidia/mit-b4 --bs 1 --img 800 --patience 150 --n_epochs 200
+python final0518.py --lr 3e-5 --model_type nvidia/mit-b4 --feature_ext_type nvidia/mit-b4 --bs 1 --img 800 --patience 150 --n_epochs 200
 ```
 ## Inference Only
 If you just want to inference with well-trained model, please follow the format in `final0518.py`. (Remove `best_` and `.pt`)
