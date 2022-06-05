@@ -47,7 +47,7 @@ def divideTrainValiTest(source, target):
                             target + '/valid/' + classes + '/' + validation_pic)
 
 if __name__ == '__main__':
-    filepath = r'./Images'
+    filepath = r'./SEG_Train_Datasets'
     dist = r'./Images_Train90Valid10'
     make_dir(filepath, dist)
     divideTrainValiTest(filepath, dist)
