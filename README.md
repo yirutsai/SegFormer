@@ -15,12 +15,14 @@ pip install labelme
 ```
 
 ## Preprocess
+After this step, there should be "Images_Train90Valid10" and "SEG_Train_Datasets/Train_Masks"
 ```
 python preprocess.py
 python divide.py
 ```
 
 ## Training
+After training there should be the inference of test dataset in `./output/` whose name is related to your model name. And the model weight will be saved in the same directory as `final0518.py`
 ```
 python final0518.py \
         --lr <learning_rate> \
@@ -44,6 +46,7 @@ python final0518.py --lr 3e-5 --model_type nvidia/mit-b4 --feature_ext_type nvid
 ## Inference Only
 If you just want to inference with well-trained model, please follow the format in `final0518.py`. (Remove `best_` and `.pt`)
 For example, if you want to inference `best_nvidia_mit-b4_9101.pt`, please set `model_type` as `nvidia/mit-b4_9101`.
+After inferencing, there should be the output of the test dataset in the `./output/` whose name is related as your model name.
 ```
 python final0518.py --lr 3e-5 --model_type nvidia/mit-b4_9101 --feature_ext_type nvidia/mit-b4 --bs 1 --img 800 --patience 150 --n_epochs 200
 ```
