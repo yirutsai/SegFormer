@@ -64,7 +64,7 @@ python ensemble_p.py
 
 
 ## Reproduce best performance
-Please download the model from this [site](https://drive.google.com/drive/folders/1Z7o0ZELb4bnwSKctMTNf7j9mUxZSHDZ7?usp=sharing).
+Please download the model from this [site](https://drive.google.com/drive/folders/1bnBg3D_6IzdyI23ayXjHDoK1S_UqSWPf?usp=sharing).
 1. Ensemble `best_nvidia_mit-b4_9101.pt`,`best_nvidia_mit-b5_9133.pt`,`best_nvidia_mit-b5_9077.pt`,`best_nvidia_mit-b5_9113.pt` to generate the first candidate.
 2. Ensemble `best_nvidia_mit-b4_800_9148.pt`,`best_nvidia_mit-b4_800_bs4_9179.pt`,`best_nvidia_mit-b5_800_9152.pt` to generate the second candidate.
 3. Ensemble the first and second candidate with `best_nvidia_mit-b4_1000_9206.pt`(,`best_nvidia_mit-b4_840_9208.pt` there should be this file, however it corrupted accidently), and use `best_nvidia_mit-b5_800_9105.pt` as precision.
